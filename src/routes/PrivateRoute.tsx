@@ -7,7 +7,6 @@ interface IProps {
 }
 
 export default function PrivateRoute({ children }: IProps) {
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 	const { data, isLoading } = useAppSelector((state) => state.user);
 
 	const { pathname } = useLocation();
@@ -20,7 +19,6 @@ export default function PrivateRoute({ children }: IProps) {
 		);
 	}
 
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 	if (!data?.email && !isLoading) {
 		return <Navigate to='/signin' state={{ path: pathname }} />;
 	}

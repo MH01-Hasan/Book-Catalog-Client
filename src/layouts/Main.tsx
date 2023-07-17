@@ -1,9 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
-
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useGetMeQuery } from "../redux/features/user/userApi";
 import { setUser } from "../redux/features/user/userSlice";
@@ -13,11 +11,9 @@ const Main = () => {
 	const dispatch = useAppDispatch();
 
 	const token = localStorage.getItem("token");
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	const { data, isLoading } = useGetMeQuery(token);
 
 	useEffect(() => {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 		if (data?.data?._id) {
 			dispatch(setUser(data.data));
 		}
@@ -34,6 +30,7 @@ const Main = () => {
 		<>
 			<Header />
 			<Outlet />
+			<Footer />
 			<Toaster />
 		</>
 	);
