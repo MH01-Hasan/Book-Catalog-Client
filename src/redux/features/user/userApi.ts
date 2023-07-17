@@ -3,6 +3,7 @@ import api from "../../api/apiSlice";
 
 const userApi = api.injectEndpoints({
   endpoints: (builder) => ({
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     getUser: builder.query({
       query: (id: string) => `/api/v1/users/${id}`,
     }),
