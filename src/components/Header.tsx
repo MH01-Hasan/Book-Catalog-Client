@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { logout } from "../redux/features/user/userSlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 const Header = () => {
+	const { data: user } = useAppSelector((state) => state.user);
+	const dispatch = useAppDispatch();
   return (
     <div>
       <div className="navbar bg-base-100">
