@@ -17,8 +17,8 @@ const Wishlist = () => {
 		);
 
 	return (
-		<>
-			<div className='container'>
+
+			<div className='m-10'>
 				<div className='py-16'>
 					<div className='text-center pb-8'>
 						<h2 className='text-xl font-semibold'>Wishlist</h2>
@@ -31,7 +31,7 @@ const Wishlist = () => {
 					{data?.data?.length === 0 && <div>No books in whishlist.</div>}
 				</div>
 			</div>
-		</>
+		
 	);
 };
 

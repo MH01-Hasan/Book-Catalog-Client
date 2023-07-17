@@ -9,7 +9,7 @@ const Home = () => {
 	});
 
 	return (
-			<div className='m-6'>
+			<div className='m-10'>
 				<div className=' flex flex-col' style={{ alignItems: "center" }}>
 					<div className='text-center pb-8'>
 						<h2 className='text-xl font-semibold'>Recently Added Books</h2>
@@ -19,7 +19,7 @@ const Home = () => {
 							<BookGrid key={book._id} book={book}></BookGrid>
 						))}
 					</div>
-					<button className='bg-[#171547] text-white px-4 py-1 rounded-md w-40 mt-5'>
+					<button className='bg-[#171547] text-white px-4 py-1 rounded-md w-40 mt-5 h-12'>
 						<Link to='all-books'>View More</Link>
 					</button>
 				</div>

@@ -38,8 +38,8 @@ const AllBooks = () => {
 		);
 
 	return (
-		<>
-			<div className='container'>
+
+			<div className='m-10'>
 				<div className='py-16'>
 					<div className='text-center pb-8'>
 						<h2 className='text-xl font-semibold text-[#171547]'>All Books</h2>
@@ -85,14 +85,14 @@ const AllBooks = () => {
 							</div>
 						</form>
 					</div>
-					<div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+					<div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
 						{data?.data?.map((book: iBook) => (
 							<BookGrid key={book._id} book={book}></BookGrid>
 						))}
 					</div>
 				</div>
 			</div>
-		</>
+	
 	);
 };
 
