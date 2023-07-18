@@ -9,10 +9,10 @@ const BookGrid = ({ book }: iProps) => {
   return (
       <div className="card card-side bg-base-100 border-2  rounded-md shadow-2xl">
         <div className="w-80">
-          <img src={book.banner} alt={book.name}  className="w-80 flex"/>
+          <img src={book?.banner} alt={book?.name}  className="w-80 h-80 flex m-2"/>
         </div>
         <div className="card-body">
-          <h2 className="card-title">New movie is released!</h2>
+          <h2 className="card-title">{book?.name}</h2>
 		  <p className="text-gray-700 ">by - {book.author}</p>
           <p className="text-gray-700">{book.genre}</p>
           <p className="text-gray-600 text-sm mt-2">

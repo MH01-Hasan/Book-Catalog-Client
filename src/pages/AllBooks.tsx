@@ -42,7 +42,7 @@ const AllBooks = () => {
 			<div className='m-10'>
 				<div className='py-16'>
 					<div className='text-center pb-8'>
-						<h2 className='text-xl font-semibold text-[#171547]'>All Books</h2>
+						<h2 className='text-3xl font-semibold text-[#171547]'>All Books</h2>
 					</div>
 					<div className='mb-10 flex justify-center'>
 						<form onSubmit={handleSearch}>

@@ -46,7 +46,7 @@ const BookDetails = () => {
 			comment,
 		};
 
-		console.log(data);
+		
 
 		await createComment(data).then((data: any) => {
 			if (data?.data) {
@@ -76,10 +76,11 @@ const BookDetails = () => {
 	// const handleReading = () => {};
 
 	return (
-		<>
+		<div className="w-1/2 m-auto">
 			<div
 				key={book.name}
 				className='bg-white overflow-hidden transition duration-300 ease-in-out transform hover:-translate-y-1 text-center p-2'>
+				<div>
 				<img
 					className='mx-auto'
 					src={book.banner}
@@ -89,39 +90,47 @@ const BookDetails = () => {
 						height: "275px",
 					}}
 				/>
+				</div>
+				<div className="px-5">
 				{isAuthorized ? (
 					<Link
 						to={`/all-books/${id as string}/edit`}
-						className='btn btn-sm btn-ghost px-1 text-2xl '>
+						className='btn btn-sm btn-ghost px-3 text-3xl mr-2 '>
 						<BiEdit />
 					</Link>
 				) : (
 					<button
 						disabled={!isAuthorized}
-						className='btn btn-sm btn-ghost px-1 text-2xl '>
+						className='btn btn-sm btn-ghost px-3 text-3xl mr-2'>
 						<BiEdit />
 					</button>
 				)}
 				<button
 					onClick={handleDelete}
 					disabled={!isAuthorized}
-					className='btn btn-sm btn-ghost px-1 text-2xl '>
+					className='btn btn-sm btn-ghost px-3 text-3xl mr-2 '>
 					<AiOutlineDelete />
 				</button>
 				<button
 					onClick={handleWishlist}
 					disabled={!isUserActive}
-					className='btn btn-sm btn-ghost px-1 text-2xl '>
+					className='btn btn-sm btn-ghost px-3 text-3xl mr-2'>
 					<AiOutlineHeart />
 				</button>
+
+				</div>
+				
+
+
+
 				<div>
 					<div className='font-bold  mb-2'>{book.name}</div>
-					<p className='text-gray-700 '>by - {book.author}</p>
-					<p className='text-gray-700'>{book.genre}</p>
-					<p className='text-gray-600 text-sm mt-2'>
+					<p className='text-gray-700 text-2xl'>by - {book.author}</p>
+					<p className='text-gray-700 text-xl '>{book.genre}</p>
+					<p className='text-gray-600 text-xl mt-2'>
 						{new Date(book.publicationDate).toLocaleString()}
 					</p>
-					<p className='text-gray-600 text-sm mt-2'>{book.summary}</p>
+					<p className='text-gray-600 text-xl mt-2'>{book.summary}</p>
 				</div>
 
 				<div className='max-w-2xl mx-auto mt-5'>
@@ -159,7 +168,7 @@ const BookDetails = () => {
 					</form>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
