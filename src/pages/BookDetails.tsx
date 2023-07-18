@@ -45,9 +45,7 @@ const BookDetails = () => {
 			book: id,
 			comment,
 		};
-
-		
-
+// create comment 
 		await createComment(data).then((data: any) => {
 			if (data?.data) {
 				toast.success("Comment added successfull.");
@@ -73,7 +71,6 @@ const BookDetails = () => {
 		toast.success("Wishlist added successfull.");
 	};
 
-	// const handleReading = () => {};
 
 	return (
 		<div className="w-1/2 m-auto">
