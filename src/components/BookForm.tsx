@@ -26,7 +26,7 @@ const BookForm = ({ data, handler }: iProps) => {
 						name='banner'
 						defaultValue={data?.banner}
 						className='input input-sm input-bordered w-full h-12 '
-						required ='true'
+						required={true}
 					/>
 				</div>
 				<div className='form-control w-full '>
@@ -38,7 +38,7 @@ const BookForm = ({ data, handler }: iProps) => {
 						name='book_name'
 						defaultValue={data?.name}
 						className='input input-sm input-bordered w-full  h-12'
-						required ='true'
+						required={true}
 					/>
 				</div>
 
@@ -51,7 +51,7 @@ const BookForm = ({ data, handler }: iProps) => {
 						name='author'
 						defaultValue={data?.author}
 						className='input input-sm input-bordered w-full  h-12'
-						required ='true'
+						required={true}
 					/>
 				</div>
 
@@ -64,7 +64,7 @@ const BookForm = ({ data, handler }: iProps) => {
 						name='publication_date'
 						defaultValue={formattedDate}
 						className='input input-sm input-bordered w-full'
-						required ='true'
+						required={true}
 					/>
 				</div>
 
@@ -92,7 +92,7 @@ const BookForm = ({ data, handler }: iProps) => {
 						name='summary'
 						defaultValue={data?.summary}
 						className='textarea textarea-bordered h-24'
-						required ='true'
+						required={true}
 						></textarea>
 						
 				</div>
